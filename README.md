@@ -1,4 +1,4 @@
-# madhukalaimalai.github.io
+# mkalaimalai.github.io
 
 Personal portfolio website for **Madhu Kalaimalai** — Principal Architect based in Bangalore, India.
 
@@ -42,4 +42,4 @@ Static output is generated in the `out/` directory.
 
 ## Deployment
 
-Hosted via [GitHub Pages](https://pages.github.com/) at `https://madhukalaimalai.github.io`. Configure GitHub Pages to deploy from the `out/` directory, or use a GitHub Actions workflow to build and deploy.
+Hosted via [GitHub Pages](https://pages.github.com/) at `https://mkalaimalai.github.io`. This repository is the GitHub user site, so it deploys at the root domain with no `basePath`. Use the included GitHub Actions workflow to build and deploy.

@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const [owner, repo] = process.env.GITHUB_REPOSITORY?.split("/") ?? [];
+const isProjectPages = Boolean(owner && repo && repo !== `${owner}.github.io`);
+const basePath = isProjectPages ? `/${repo}` : undefined;
 
-    output: 'export',
+const nextConfig: NextConfig = {
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: '/mkalaimalai.github.com',
-  assetPrefix: '/mkalaimalai.github.com/',
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
 };
-
-
-
-
 export default nextConfig;

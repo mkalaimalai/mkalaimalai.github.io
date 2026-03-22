@@ -1,10 +1,10 @@
-# Deploying madhu.kalaimalai to GitHub Pages
+# Deploying mkalaimalai.github.io to GitHub Pages
 
 ## Quick Steps (5 minutes)
 
 ### 1. Create the Repository
 - Go to [github.com/new](https://github.com/new)
-- Repository name: `madhukalaimalai.github.io`
+- Repository name: `mkalaimalai.github.io`
 - Set to **Public**
 - Click **Create repository**
 
@@ -22,7 +22,7 @@
 
 ### 4. Visit Your Site
 - Wait 1-2 minutes for deployment
-- Your site is live at: **https://madhukalaimalai.github.io**
+- Your site is live at: **https://mkalaimalai.github.io**
 
 ---
 
@@ -37,7 +37,7 @@ If you own a domain (e.g., `kalaimalai.dev`):
      - `185.199.109.153`
      - `185.199.110.153`
      - `185.199.111.153`
-   - **CNAME** record: `www` → `madhukalaimalai.github.io`
+   - **CNAME** record: `www` → `mkalaimalai.github.io`
 3. Check "Enforce HTTPS" once DNS propagates
 
 ## Before You Deploy

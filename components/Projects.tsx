@@ -6,7 +6,7 @@ const projects = [
     title: "Karuna Karma Soul & DNA Healing",
     description:
       "An interactive daily practice guide for Karuna Reiki healing — featuring chakra mappings, symbol references, guided meditation audio, and visualization video.",
-    href: "/karuna-healing/index.html",
+    href: "karuna-healing/index.html",
     tags: ["Healing", "Meditation", "Chakras", "Karuna Reiki"],
   },
 ];
