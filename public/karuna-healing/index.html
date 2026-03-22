@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karuna Karma Soul &amp; DNA Healing — Daily Practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crown: #7B2D8E;
+  --third-eye: #2E3192;
+  --throat: #29ABE2;
+  --heart: #39B54A;
+  --solar: #FBB03B;
+  --sacral: #F7931E;
+  --root: #ED1C24;
+  --bg: #0a0a0f;
+  --bg-card: #111118;
+  --bg-card-hover: #1a1a24;
+  --text: #e8e4df;
+  --text-muted: #9a9590;
+  --gold: #c9a84c;
+  --gold-light: #e6d5a0;
+  --border: rgba(201,168,76,0.15);
+  --glow: rgba(201,168,76,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Philosopher', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(123,45,142,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(201,168,76,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(46,49,146,0.06) 0%, transparent 60%),
+    var(--bg);
+}
+
+.hero .om-symbol {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 20px rgba(201,168,76,0.2); opacity: 0.7; }
+  50% { text-shadow: 0 0 40px rgba(201,168,76,0.5); opacity: 1; }
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  display: block;
+  font-size: 0.45em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-family: 'Philosopher', serif;
+}
+
+.hero p.tagline {
+  max-width: 600px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin: 1.5rem auto 2.5rem;
+  font-style: italic;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  animation: bob 2s ease-in-out infinite;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ==================== NAV ==================== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,15,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sticky-nav::-webkit-scrollbar { height: 0; }
+
+.nav-inner {
+  display: flex;
+  gap: 0.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-inner a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.nav-inner a:hover {
+  color: var(--gold);
+  border-color: var(--border);
+  background: var(--glow);
+}
+
+/* ==================== SECTIONS ==================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 300;
+  color: var(--gold-light);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 3rem;
+}
+
+/* ==================== AUDIO ==================== */
+.audio-section {
+  background: linear-gradient(180deg, rgba(201,168,76,0.04) 0%, transparent 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.audio-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.audio-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.audio-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.audio-card audio {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ==================== VIDEO ==================== */
+.video-section {
+  background: linear-gradient(180deg, rgba(46,49,146,0.04) 0%, transparent 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.video-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 2rem 0;
+  text-align: center;
+}
+
+.video-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  border-radius: 0 0 16px 16px;
+}
+
+/* ==================== CHAKRA TABLE ==================== */
+.chakra-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.chakra-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chakra-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.chakra-color-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chakra-color-bar .sanskrit {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  opacity: 0.9;
+}
+
+.chakra-color-bar .english {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+}
+
+.chakra-details {
+  padding: 1.2rem 1.2rem 1.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.chakra-detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.chakra-detail-item .label {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.chakra-detail-item .value {
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+/* ==================== CHAKRA IMAGES ==================== */
+.chakra-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.chakra-img-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: transform 0.3s;
+}
+
+.chakra-img-card:hover { transform: scale(1.02); }
+
+.chakra-img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chakra-img-card .caption {
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ==================== SYMBOLS ==================== */
+.symbols-overview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.symbols-overview img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.symbols-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.symbol-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.symbol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.symbol-card-inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+}
+
+.symbol-img {
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.symbol-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.symbol-info {
+  padding: 1.4rem;
+}
+
+.symbol-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+
+.symbol-info .symbol-subtitle {
+  color: var(--gold);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
+}
+
+.symbol-info p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.symbol-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.symbol-keywords span {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.15);
+  color: var(--gold);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+}
+
+/* ==================== HEALING STEPS ==================== */
+.steps-list {
+  max-width: 750px;
+  margin: 0 auto;
+  counter-reset: step;
+}
+
+.step-item {
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.step-item::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: linear-gradient(135deg, var(--gold), #9a7b2e);
+  color: var(--bg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.step-item::after {
+  content: '';
+  position: absolute;
+  left: 1.35rem;
+  top: 3rem;
+  bottom: -1.5rem;
+  width: 1px;
+  background: var(--border);
+}
+
+.step-item:last-child::after { display: none; }
+
+.step-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+}
+
+.step-item p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ==================== APPLICATIONS ==================== */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.app-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  transition: background 0.3s;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.app-item:hover { background: var(--bg-card-hover); }
+
+.app-item .app-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ==================== DOWNLOADS ==================== */
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s;
+}
+
+.download-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.download-info h4 {
+  color: var(--gold-light);
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 0.15rem;
+}
+
+.download-info p {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+footer .footer-om {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 700px) {
+  .symbol-card-inner {
+    grid-template-columns: 1fr;
+  }
+  .symbol-img {
+    max-height: 250px;
+    overflow: hidden;
+  }
+  .chakra-row {
+    grid-template-columns: 1fr;
+  }
+  .chakra-details {
+    padding: 1rem;
+  }
+  .nav-inner {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="om-symbol">ॐ</div>
+  <h1>
+    Karuna Karma Soul &amp; DNA Healing
+    <span>Daily Practice Guide</span>
+  </h1>
+  <p class="tagline">
+    Awakening Universal Compassion through the sacred Karuna symbols,
+    chakra alignment, and karmic healing — a complete reference for your daily sadhana.
+  </p>
+  <div class="scroll-hint">▾</div>
+</section>
+
+<!-- ==================== NAV ==================== -->
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <a href="#audio">Guided Healing</a>
+    <a href="#video">Visualization</a>
+    <a href="#chakras">Chakra Map</a>
+    <a href="#symbols">9 Symbols</a>
+    <a href="#steps">Healing Steps</a>
+    <a href="#applications">Applications</a>
+    <a href="#downloads">Downloads</a>
+  </div>
+</nav>
+
+<!-- ==================== AUDIO ==================== -->
+<section id="audio" class="audio-section">
+  <div class="container">
+    <h2 class="section-title">Guided Healing Session</h2>
+    <p class="section-subtitle">Listen to Simran's Karuna Healing guided meditation</p>
+    <div class="divider"></div>
+    <div class="audio-card">
+      <h3>Karuna Healing by Simran</h3>
+      <p>Play this during your daily healing practice for guided support.</p>
+      <audio controls preload="metadata">
+        <source src="assets/Kruna_Healing_by_Simran_.m4a" type="audio/mp4">
+        Your browser does not support audio.
+      </audio>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VIDEO ==================== -->
+<section id="video" class="video-section">
+  <div class="container">
+    <h2 class="section-title">Healing Visualization</h2>
+    <p class="section-subtitle">Watch the Karuna Healing visualization practice</p>
+    <div class="divider"></div>
+    <div class="video-card">
+      <h3>Karuna Healing Visualization</h3>
+      <p>A guided visual journey through the Karuna healing process. Watch to deepen your practice.</p>
+      <video controls preload="metadata" poster="">
+        <source src="assets/Karuna_Healing_Visualization.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAKRAS ==================== -->
+<section id="chakras">
+  <div class="container">
+    <h2 class="section-title">Chakra – Planet – Karmic Map</h2>
+    <p class="section-subtitle">Each chakra corresponds to a planet (graha), element, and karmic layer</p>
+    <div class="divider"></div>
+
+    <div class="chakra-grid">
+
+      <!-- Crown -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #7B2D8E, #5a1d6b);">
+          <div class="sanskrit">ॐ</div>
+          <div class="english">Sahasrara · Crown</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Sun (Surya)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Cosmic Energy</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Om / Silence</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Consciousness</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Spiritual — Liberation</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Cosmic Energy</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Ego Attachment</span></div>
+        </div>
+      </div>
+
+      <!-- Third Eye -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #2E3192, #1a1d5e);">
+          <div class="sanskrit">ॐ</div>
+          <div class="english">Ajna · Third Eye</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Moon (Chandra)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Mind / Light</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Om</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Nervous</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Mind — Vision &amp; Clarity</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Insight</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Illusion</span></div>
+        </div>
+      </div>
+
+      <!-- Throat -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #29ABE2, #1d7fa8);">
+          <div class="sanskrit">हं</div>
+          <div class="english">Vishuddha · Throat</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Mercury (Buddh)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Ether / Space</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Ham</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Respiratory</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Emotional — Dharmic Duty</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Truth</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Lies</span></div>
+        </div>
+      </div>
+
+      <!-- Heart -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #39B54A, #2a8537);">
+          <div class="sanskrit">यं</div>
+          <div class="english">Anahata · Heart</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Venus (Shukra)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Air</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Yam</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Cardiovascular</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Love — Soul Karma</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Love</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Grief</span></div>
+        </div>
+      </div>
+
+      <!-- Solar Plexus -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #FBB03B, #c88a1e);">
+          <div class="sanskrit">रं</div>
+          <div class="english">Manipura · Solar Plexus</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Jupiter (Guru)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Fire</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Ram</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Digestive</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Ancestor — Parents' Karma</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Willpower</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Shame / Ego</span></div>
+        </div>
+      </div>
+
+      <!-- Sacral -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #F7931E, #c47216);">
+          <div class="sanskrit">वं</div>
+          <div class="english">Swadhisthana · Sacral</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Saturn (Shani)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Water</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Vam</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Lymphatic</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Present Life Karma</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Pleasure</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Guilt / Insecurity</span></div>
+        </div>
+      </div>
+
+      <!-- Root -->
+      <div class="chakra-row">
+        <div class="chakra-color-bar" style="background: linear-gradient(135deg, #ED1C24, #b0161c);">
+          <div class="sanskrit">लं</div>
+          <div class="english">Muladhara · Root</div>
+        </div>
+        <div class="chakra-details">
+          <div class="chakra-detail-item"><span class="label">Planet</span><span class="value">Mars (Mangal)</span></div>
+          <div class="chakra-detail-item"><span class="label">Element</span><span class="value">Earth</span></div>
+          <div class="chakra-detail-item"><span class="label">Mantra</span><span class="value">Lam</span></div>
+          <div class="chakra-detail-item"><span class="label">System</span><span class="value">Physical Body</span></div>
+          <div class="chakra-detail-item"><span class="label">Karmic Issue</span><span class="value">Past Life Karma</span></div>
+          <div class="chakra-detail-item"><span class="label">+ Emotion</span><span class="value">Survival</span></div>
+          <div class="chakra-detail-item"><span class="label">− Emotion</span><span class="value">Fear</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hand Chakras -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.3rem; margin-bottom: 0.3rem;">🤚</div>
+        <div style="color: var(--gold-light); font-size: 0.95rem; font-family: 'Cormorant Garamond', serif;">Left Hand — Rahu</div>
+        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.3rem;">Receiving hand — absorbs past life karmic influences</div>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.3rem; margin-bottom: 0.3rem;">✋</div>
+        <div style="color: var(--gold-light); font-size: 0.95rem; font-family: 'Cormorant Garamond', serif;">Right Hand — Ketu</div>
+        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.3rem;">Giving hand — releases karma, detachment, spiritual letting go</div>
+      </div>
+    </div>
+
+    <!-- Chakra reference images -->
+    <div class="chakra-images">
+      <div class="chakra-img-card">
+        <img src="assets/Chakras-Colors_Planets_Karmic.jpeg" alt="Chakras Colors Planets Karmic mapping" loading="lazy">
+        <div class="caption">Chakra – Color – Planet – Karmic Overview</div>
+      </div>
+      <div class="chakra-img-card">
+        <img src="assets/Chakras-Planets.jpeg" alt="Chakras and Planets (Graha)" loading="lazy">
+        <div class="caption">Chakra &amp; Graha (Planet) Mapping</div>
+      </div>
+      <div class="chakra-img-card">
+        <img src="assets/Chakras-Sanskrit_English.jpeg" alt="Chakras Sanskrit and English names" loading="lazy">
+        <div class="caption">Chakra Names — Sanskrit &amp; English</div>
+      </div>
+      <div class="chakra-img-card">
+        <img src="assets/Chakras-Spirituality.jpeg" alt="Chakras Spirituality and Elements" loading="lazy">
+        <div class="caption">Chakra – Spirituality – Elements – Karmic Layers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 9 SYMBOLS ==================== -->
+<section id="symbols" style="background: linear-gradient(180deg, rgba(201,168,76,0.03) 0%, transparent 100%);">
+  <div class="container">
+    <h2 class="section-title">The 9 Karuna Healing Symbols</h2>
+    <p class="section-subtitle">Sacred symbols used to channel Karuna energy across body, mind, and soul levels</p>
+    <div class="divider"></div>
+
+    <!-- Overview image -->
+    <div class="symbols-overview">
+      <img src="assets/Karuna-Reiki-Symbols.jpeg" alt="All 9 Karuna Reiki Symbols overview" loading="lazy">
+    </div>
+
+    <div class="symbols-grid">
+
+      <!-- 1. Zonar -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Zonar.jpeg" alt="Zonar symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>1. Zonar</h3>
+            <div class="symbol-subtitle">General Karma Deleting</div>
+            <p>Works with past lives, karmic issues, and undefined patterns. Acts as a spiritual anesthetic — its energy penetrates deep to eliminate physical, mental, and emotional discomforts at the cellular level.</p>
+            <div class="symbol-keywords">
+              <span>Past Lives</span><span>Cellular Healing</span><span>Anesthetic</span><span>Abuse</span><span>Preparation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Harth -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Harth.jpeg" alt="Harth symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>2. Harth</h3>
+            <div class="symbol-subtitle">Relationship &amp; Soul Level Healing</div>
+            <p>Heals heart issues, develops compassion, restores love of life. Excellent for addictions of all kinds. Inspires and guides to right action through spiritual communication and unity.</p>
+            <div class="symbol-keywords">
+              <span>Compassion</span><span>Heart</span><span>Relationships</span><span>Addictions</span><span>Healthy Habits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Halu -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Halu.jpeg" alt="Halu symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>3. Halu</h3>
+            <div class="symbol-subtitle">Physical Level Healing</div>
+            <p>Works in higher dimensions and deeper levels. Restores balance on the physical plane, breaks negative patterns in the unconscious mind. Addresses abuse issues, shadow self, and psychic/psychological attacks.</p>
+            <div class="symbol-keywords">
+              <span>Self-Acceptance</span><span>Shadow Self</span><span>Physical Healing</span><span>Psychic Attack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Rama -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Rama.jpeg" alt="Rama symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>4. Rama</h3>
+            <div class="symbol-subtitle">Chakra Level Healing</div>
+            <p>Heals and harmonizes all chakras. Cleanses crystals, rooms, and spaces of negative energies. Empowers material goals, creates determination, and clears dense blockages in the etheric field.</p>
+            <div class="symbol-keywords">
+              <span>Chakras</span><span>Grounding</span><span>Manifestation</span><span>Space Clearing</span><span>Goals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Gnosa -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Gnosa.jpeg" alt="Gnosa symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>5. Gnosa</h3>
+            <div class="symbol-subtitle">Mind Level Healing</div>
+            <p>Links strongly with the higher self, bringing higher consciousness into the physical body. Increases awareness, communication, and learning abilities. Apply before meditation for best experience.</p>
+            <div class="symbol-keywords">
+              <span>Higher Self</span><span>Learning</span><span>Communication</span><span>Concentration</span><span>Memory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Kriya -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Kriya.jpeg" alt="Kriya symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>6. Kriya</h3>
+            <div class="symbol-subtitle">Aura Cleansing</div>
+            <p>Used for physical manifestation and healing humanity. Helps put goals, dreams, and vision into action. Connects chakras, cleanses and energizes the aura, and purifies spaces.</p>
+            <div class="symbol-keywords">
+              <span>Aura Cleansing</span><span>Manifestation</span><span>Chakra Connection</span><span>Room Cleansing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Om -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Om.jpeg" alt="Om symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>7. Om</h3>
+            <div class="symbol-subtitle">Welcoming God</div>
+            <p>The primordial Sanskrit symbol of oneness. Opens the crown chakra, purifies, protects, and stabilizes the aura. Used across many eastern spiritual practices — the frequency of earth's rotation.</p>
+            <div class="symbol-keywords">
+              <span>Oneness</span><span>Crown Chakra</span><span>Protection</span><span>Purification</span><span>Aura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Iava -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/E-Ava.jpeg" alt="Iava symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>8. Iava (Ee-Ah-Vah)</h3>
+            <div class="symbol-subtitle">Wish Manifestation</div>
+            <p>Helps manifest wishes and recreate your reality. Empowers personal Divine power, releases codependence, keeps the etheric heart clear, and helps live more consciously. Heals the earth.</p>
+            <div class="symbol-keywords">
+              <span>Wishes</span><span>Reality Creation</span><span>Empowerment</span><span>Earth Healing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Shanti -->
+      <div class="symbol-card">
+        <div class="symbol-card-inner">
+          <div class="symbol-img">
+            <img src="assets/Shanti.jpeg" alt="Shanti symbol drawing steps" loading="lazy">
+          </div>
+          <div class="symbol-info">
+            <h3>9. Shanti</h3>
+            <div class="symbol-subtitle">For Peace</div>
+            <p>Releases fear, nightmares, and worries. Soothes the aura, heals the past, creates harmony in the present, and releases the future. Transforms situations into positive experiences. Aids trust in life and clairvoyance.</p>
+            <div class="symbol-keywords">
+              <span>Peace</span><span>Fear Release</span><span>Trust</span><span>Insomnia</span><span>Clairvoyance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HEALING STEPS ==================== -->
+<section id="steps">
+  <div class="container">
+    <h2 class="section-title">Daily Healing Practice — Steps</h2>
+    <p class="section-subtitle">Follow these steps each session for self-healing or healing others</p>
+    <div class="divider"></div>
+
+    <div class="steps-list">
+
+      <div class="step-item">
+        <h3>Invocation</h3>
+        <p>Call upon all Gods, masters, healing angels, and spiritual helpers. Ask to be blessed with energy to perform the healing. Set your intention clearly.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>Self-Charging</h3>
+        <p>Charge all 9 major energy centers: Crown (Sahasrara), Third Eye (Ajna), Throat (Vishuddha), Heart (Anahata), Solar Plexus (Manipura), Sacral (Swadhisthana), Root (Muladhara), plus the Left Hand (Rahu) and Right Hand (Ketu) chakras.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>Room Charging</h3>
+        <p>Purify the four corners of the room using the Kriya symbol. At the center, visualize all 9 Karuna symbols activating the space with healing energy.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>Healing — Apply All 9 Symbols</h3>
+        <p>Place all 9 Karuna symbols on yourself, others, pitrus (ancestors), kundali, or deities. This addresses karmic issues across past, present, and future. Apply symbols to increase spiritual power by placing them on self, God, gurus, and parents.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>Positive Visualization &amp; Affirmations</h3>
+        <p>Visualize your wishes as completely manifested. Feel the joy and happiness with deep emotion. Apply positive affirmations repeatedly while holding the vision.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>Thanksgiving Prayer</h3>
+        <p>Express gratitude to Masters, Gurus, Gods and Goddesses, universal energy, all spiritual souls, and universal masters. Thank the patient's soul for accepting healing. Thank your own soul for being an instrument. Cut the cords three times from your navel/solar region.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== APPLICATIONS ==================== -->
+<section id="applications" style="background: linear-gradient(180deg, rgba(201,168,76,0.03) 0%, transparent 100%);">
+  <div class="container">
+    <h2 class="section-title">Where to Apply Karuna Healing</h2>
+    <p class="section-subtitle">Place all 9 symbols with positive affirmation on any of these</p>
+    <div class="divider"></div>
+
+    <div class="app-grid">
+      <div class="app-item"><span class="app-icon">🧘</span> Self, chakras, and daily meditation</div>
+      <div class="app-item"><span class="app-icon">🙏</span> Pitrus (ancestors), kundali, gods/deities</div>
+      <div class="app-item"><span class="app-icon">💧</span> Water, food, and medicine (reduce side effects)</div>
+      <div class="app-item"><span class="app-icon">📄</span> Documents — exams, legal papers, bank passbooks</div>
+      <div class="app-item"><span class="app-icon">💼</span> Business — visiting cards, brochures, staff, clients</div>
+      <div class="app-item"><span class="app-icon">🏠</span> Room and property purification</div>
+      <div class="app-item"><span class="app-icon">💎</span> Crystal charging and programming</div>
+      <div class="app-item"><span class="app-icon">💻</span> Equipment — computers, machines, devices</div>
+      <div class="app-item"><span class="app-icon">🌍</span> Natural calamities, disasters, and global events</div>
+      <div class="app-item"><span class="app-icon">⏳</span> Events of past, present, or future</div>
+      <div class="app-item"><span class="app-icon">📦</span> Products you are selling</div>
+      <div class="app-item"><span class="app-icon">📚</span> School and college books</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DOWNLOADS ==================== -->
+<section id="downloads">
+  <div class="container">
+    <h2 class="section-title">Reference Materials</h2>
+    <p class="section-subtitle">Download PDFs for offline study and practice</p>
+    <div class="divider"></div>
+
+    <div class="downloads-grid">
+      <a href="assets/Karuna_Healing_Notes__English_.pdf" class="download-card" target="_blank" rel="noopener">
+        <div class="download-icon">📘</div>
+        <div class="download-info">
+          <h4>Karuna Healing Notes (English)</h4>
+          <p>Complete guide with all symbols, steps, and applications</p>
+        </div>
+      </a>
+      <a href="assets/Chakra_Karmic_Mapping.pdf" class="download-card" target="_blank" rel="noopener">
+        <div class="download-icon">📙</div>
+        <div class="download-info">
+          <h4>Chakra – Karmic Mapping</h4>
+          <p>Quick-reference chart of chakra–planet–karma correspondences</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-om">ॐ</div>
+  <p>Karuna Karma Soul &amp; DNA Healing — Sai Karuna Mission</p>
+  <p style="margin-top: 0.3rem; font-size: 0.75rem;">Compiled for daily practice reference. Source material by Dr. Uday Shah &amp; Sai Karuna Mission.</p>
+</footer>
+
+</body>
+</html>
