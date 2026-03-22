@@ -17,7 +17,7 @@ export default function About() {
         <SectionHeader number="01" title="About" />
         <RevealOnScroll>
           <div className="grid grid-cols-2 gap-16 items-start max-md:grid-cols-1">
-            <div className="space-y-5 text-[#3a3632]">
+            <div className="space-y-5 text-[var(--t-body-text)]">
               <p className="about-drop-cap">
                 Principal Architect based in Bangalore, India, with over 25 years of experience building complex, large-scale distributed systems. I&apos;ve led engineering teams of ~70 engineers across 5 geographies, driving platforms that power billions of notifications and billions in revenue.
               </p>

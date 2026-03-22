@@ -73,7 +73,8 @@ export default function Skills() {
                   {cat.skills.map((skill) => (
                     <li
                       key={skill.name}
-                      className="py-2 text-[0.9rem] text-[#3a3632] border-b border-rule/50 flex justify-between items-center"
+                      className="py-2 text-[0.9rem] text-[var(--t-body-text)] border-b flex justify-between items-center"
+                      style={{ borderColor: "var(--t-skill-border)" }}
                     >
                       {skill.name}
                       <SkillLevel filled={skill.level} />

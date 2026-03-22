@@ -21,13 +21,19 @@ export default function Hero() {
         <div className="inline-flex gap-4 animate-fade-up-4 max-sm:flex-col max-sm:gap-3">
           <a
             href="#experience"
-            className="inline-block px-8 py-3.5 font-body text-[0.82rem] font-medium tracking-wide uppercase no-underline rounded-sm transition-all duration-300 bg-ink text-paper border-[1.5px] border-ink hover:bg-terra hover:border-terra max-sm:text-center"
+            className="inline-block px-8 py-3.5 font-body text-[0.82rem] font-medium tracking-wide uppercase no-underline rounded-sm transition-all duration-300 border-[1.5px] hover:bg-terra hover:border-terra max-sm:text-center"
+            style={{
+              background: "var(--t-hero-btn-bg)",
+              color: "var(--t-hero-btn-text)",
+              borderColor: "var(--t-hero-btn-border)",
+            }}
           >
             View experience
           </a>
           <a
             href="#skills"
-            className="inline-block px-8 py-3.5 font-body text-[0.82rem] font-medium tracking-wide uppercase no-underline rounded-sm transition-all duration-300 bg-transparent text-ink border-[1.5px] border-rule hover:border-ink max-sm:text-center"
+            className="inline-block px-8 py-3.5 font-body text-[0.82rem] font-medium tracking-wide uppercase no-underline rounded-sm transition-all duration-300 bg-transparent border-[1.5px] border-rule max-sm:text-center"
+            style={{ color: "var(--t-hero-outline-text)" }}
           >
             Tech stack
           </a>

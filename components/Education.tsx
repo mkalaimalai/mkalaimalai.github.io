@@ -8,7 +8,7 @@ export default function Education() {
         <SectionHeader number="04" title="Education & Patents" />
         <RevealOnScroll>
           <div className="grid grid-cols-2 gap-16 items-start max-md:grid-cols-1">
-            <div className="space-y-5 text-[#3a3632]">
+            <div className="space-y-5 text-[var(--t-body-text)]">
               <h4 className="font-mono text-[0.72rem] tracking-[0.15em] uppercase text-warm-gray mb-4">
                 Education
               </h4>
@@ -25,7 +25,7 @@ export default function Education() {
                 <strong>AWS Certified Solutions Architect</strong> — Associate
               </p>
             </div>
-            <div className="space-y-5 text-[#3a3632]">
+            <div className="space-y-5 text-[var(--t-body-text)]">
               <h4 className="font-mono text-[0.72rem] tracking-[0.15em] uppercase text-warm-gray mb-4">
                 U.S. Patents
               </h4>

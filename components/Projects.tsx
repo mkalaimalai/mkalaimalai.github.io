@@ -6,7 +6,7 @@ const projects = [
     title: "Karuna Karma Soul & DNA Healing",
     description:
       "An interactive daily practice guide for Karuna Reiki healing — featuring chakra mappings, symbol references, guided meditation audio, and visualization video.",
-    href: "karuna-healing/index.html",
+    href: "/karuna-healing",
     tags: ["Healing", "Meditation", "Chakras", "Karuna Reiki"],
   },
 ];
@@ -22,7 +22,7 @@ export default function Projects() {
               <a
                 key={project.title}
                 href={project.href}
-                className="group relative bg-paper border border-rule p-10 no-underline text-inherit transition-all duration-350 overflow-hidden hover:-translate-y-1 hover:shadow-[0_12px_48px_rgba(26,26,26,0.06)]"
+                className="group relative bg-paper border border-rule p-10 no-underline text-inherit transition-all duration-350 overflow-hidden hover:-translate-y-1 project-card"
               >
                 {/* Bottom accent bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-terra scale-x-0 transition-transform duration-350 group-hover:scale-x-100" />

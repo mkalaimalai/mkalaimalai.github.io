@@ -65,7 +65,7 @@ export default function Experience() {
             {roles.map((role, i) => (
               <div
                 key={role.title}
-                className={`grid grid-cols-[120px_1fr_auto] gap-8 py-8 border-b border-rule items-baseline transition-colors duration-300 hover:bg-terra/[0.03] hover:px-6 max-md:grid-cols-1 max-md:gap-1 ${
+                className={`experience-row grid grid-cols-[120px_1fr_auto] gap-8 py-8 border-b border-rule items-baseline transition-colors duration-300 hover:px-6 max-md:grid-cols-1 max-md:gap-1 ${
                   i === 0 ? "border-t border-rule" : ""
                 }`}
               >

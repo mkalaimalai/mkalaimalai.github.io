@@ -1,20 +1,95 @@
 @import "tailwindcss";
 
+/* ─── Theme variables ─── */
+:root {
+  --t-ink: #1a1a1a;
+  --t-paper: #f8f5f0;
+  --t-cream: #f0ebe3;
+  --t-warm-gray: #8c8278;
+  --t-terra: #b85c38;
+  --t-terra-light: #d4836b;
+  --t-sage: #5a7a64;
+  --t-rule: #d4cdc4;
+  --t-body-text: #3a3632;
+  --t-nav-bg: rgba(248, 245, 240, 0.92);
+  --t-nav-mobile-bg: rgba(248, 245, 240, 0.98);
+  --t-contact-text: rgba(248, 245, 240, 0.65);
+  --t-contact-border: rgba(248, 245, 240, 0.1);
+  --t-contact-rule: rgba(248, 245, 240, 0.15);
+  --t-footer-text: rgba(248, 245, 240, 0.3);
+  --t-footer-border: rgba(248, 245, 240, 0.08);
+  --t-hover-bg: rgba(184, 92, 56, 0.03);
+  --t-skill-border: rgba(212, 205, 196, 0.5);
+  --t-card-shadow: rgba(26, 26, 26, 0.06);
+  --t-hero-btn-bg: #1a1a1a;
+  --t-hero-btn-text: #f8f5f0;
+  --t-hero-btn-border: #1a1a1a;
+  --t-hero-outline-text: #1a1a1a;
+  --t-contact-bg: #1a1a1a;
+  --t-contact-heading: #f8f5f0;
+  --t-contact-email: #f8f5f0;
+  --t-footer-bg: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  --t-ink: #e8e4df;
+  --t-paper: #0f0f14;
+  --t-cream: #161620;
+  --t-warm-gray: #9a9590;
+  --t-terra: #d4836b;
+  --t-terra-light: #e6a88e;
+  --t-sage: #7aad88;
+  --t-rule: #2a2a35;
+  --t-body-text: #c5c0ba;
+  --t-nav-bg: rgba(15, 15, 20, 0.92);
+  --t-nav-mobile-bg: rgba(15, 15, 20, 0.98);
+  --t-contact-text: rgba(232, 228, 223, 0.65);
+  --t-contact-border: rgba(232, 228, 223, 0.1);
+  --t-contact-rule: rgba(232, 228, 223, 0.15);
+  --t-footer-text: rgba(232, 228, 223, 0.3);
+  --t-footer-border: rgba(232, 228, 223, 0.08);
+  --t-hover-bg: rgba(212, 131, 107, 0.06);
+  --t-skill-border: rgba(42, 42, 53, 0.7);
+  --t-card-shadow: rgba(0, 0, 0, 0.25);
+  --t-hero-btn-bg: #e8e4df;
+  --t-hero-btn-text: #0f0f14;
+  --t-hero-btn-border: #e8e4df;
+  --t-hero-outline-text: #e8e4df;
+  --t-contact-bg: #0a0a10;
+  --t-contact-heading: #e8e4df;
+  --t-contact-email: #e8e4df;
+  --t-footer-bg: #0a0a10;
+}
+
 @theme inline {
-  --color-ink: #1a1a1a;
-  --color-paper: #f8f5f0;
-  --color-cream: #f0ebe3;
-  --color-warm-gray: #8c8278;
-  --color-terra: #b85c38;
-  --color-terra-light: #d4836b;
-  --color-sage: #5a7a64;
-  --color-rule: #d4cdc4;
+  --color-ink: var(--t-ink);
+  --color-paper: var(--t-paper);
+  --color-cream: var(--t-cream);
+  --color-warm-gray: var(--t-warm-gray);
+  --color-terra: var(--t-terra);
+  --color-terra-light: var(--t-terra-light);
+  --color-sage: var(--t-sage);
+  --color-rule: var(--t-rule);
 
   --font-display: var(--font-instrument-serif), Georgia, serif;
   --font-body: var(--font-dm-sans), -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 
   --breakpoint-md-nav: 860px;
+
+  /* Karuna healing page colors */
+  --color-k-bg: #0a0a0f;
+  --color-k-card: #111118;
+  --color-k-card-hover: #1a1a24;
+  --color-k-text: #e8e4df;
+  --color-k-muted: #9a9590;
+  --color-k-gold: #c9a84c;
+  --color-k-gold-light: #e6d5a0;
+  --color-k-border: rgba(201, 168, 76, 0.15);
+
+  --font-garamond: var(--font-cormorant-garamond), Georgia, serif;
+  --font-philosopher: var(--font-philosopher-font), serif;
+  --font-devanagari: var(--font-noto-sans-devanagari), serif;
 }
 
 html {
@@ -82,6 +157,14 @@ body {
   pointer-events: none;
 }
 
+[data-theme="dark"] .hero-orb-terra {
+  background: radial-gradient(circle, rgba(212, 131, 107, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .hero-orb-sage {
+  background: radial-gradient(circle, rgba(122, 173, 136, 0.08) 0%, transparent 70%);
+}
+
 /* Scroll line animation */
 .scroll-line::after {
   content: '';
@@ -107,6 +190,70 @@ body {
 @keyframes scrollPulse {
   0%, 100% { top: 0; }
   50% { top: 32px; }
+}
+
+/* Karuna healing page */
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 20px rgba(201,168,76,0.2); opacity: 0.7; }
+  50% { text-shadow: 0 0 40px rgba(201,168,76,0.5); opacity: 1; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.karuna-noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.karuna-step {
+  counter-increment: step;
+}
+
+.karuna-step::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: linear-gradient(135deg, #c9a84c, #9a7b2e);
+  color: #0a0a0f;
+  font-family: var(--font-garamond);
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.karuna-step::after {
+  content: '';
+  position: absolute;
+  left: 1.35rem;
+  top: 3rem;
+  bottom: -1.5rem;
+  width: 1px;
+  background: rgba(201,168,76,0.15);
+}
+
+.karuna-step:last-child::after { display: none; }
+
+/* Experience row hover */
+.experience-row:hover {
+  background: var(--t-hover-bg);
+}
+
+/* Project card shadow */
+.project-card:hover {
+  box-shadow: 0 12px 48px var(--t-card-shadow);
 }
 
 .animate-fade-up-1 { opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
