@@ -29,8 +29,8 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               {[
-                { label: "GitHub", href: "https://github.com/madhukalaimalai" },
-                { label: "LinkedIn", href: "https://linkedin.com/in/madhukalaimalai" },
+                { label: "GitHub", href: "https://github.com/in/madhukalaimalai" },
+                { label: "LinkedIn", href: "https://linkedin.com/in/mkalaimalai" },
               ].map((link, i) => (
                 <a
                   key={link.label}
@@ -45,7 +45,7 @@ export default function Contact() {
                   }}
                 >
                   <span>{link.label}</span>
-                  <span className="text-[1.2rem] transition-transform duration-300">→</span>
+                  <span className="text-[1.2rem] transition-transform duration-300" aria-hidden="true">→</span>
                 </a>
               ))}
             </div>

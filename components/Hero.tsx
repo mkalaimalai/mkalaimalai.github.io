@@ -6,7 +6,7 @@ export default function Hero() {
 
       <div className="max-w-[780px] text-center relative z-1">
         <p className="font-mono text-[0.72rem] tracking-[0.2em] uppercase text-terra mb-8 animate-fade-up-1">
-          Principal Architect &middot; Technology Leader
+          Senior Principal Architect &middot; Technology Leader
         </p>
         <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-normal leading-[1.1] tracking-tight mb-6 animate-fade-up-2">
           Building <em className="italic text-terra">complex</em>
@@ -16,7 +16,7 @@ export default function Hero() {
           distributed systems
         </h1>
         <p className="text-[1.15rem] text-warm-gray leading-[1.8] max-w-[560px] mx-auto mb-10 animate-fade-up-3">
-          Accomplished technology leader with a proven track record at Intuit, ADP, Warner Bros., and more. Passionate about architecture, engineering leadership, and building systems that scale.
+          Accomplished technology leader with a proven track record at JPMorganChase, Intuit, ADP, Warner Bros., and more. Passionate about architecture, engineering leadership, and building systems that scale.
         </p>
         <div className="inline-flex gap-4 animate-fade-up-4 max-sm:flex-col max-sm:gap-3">
           <a

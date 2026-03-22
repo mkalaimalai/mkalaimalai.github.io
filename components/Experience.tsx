@@ -1,57 +1,69 @@
 import SectionHeader from "./SectionHeader";
 import RevealOnScroll from "./RevealOnScroll";
 
-const roles = [
+interface Role {
+  dates: string;
+  title: string;
+  description: string;
+  location: string;
+}
+
+const roles: Role[] = [
   {
-    dates: "Nov 2018 —\nPresent",
+    dates: "2025 —\nPresent",
+    title: "Senior Principal Architect — JPMorganChase",
+    description: "Building and leading the Architecture & Engineering team in Asset & Wealth Management from the ground up. Driving AI-native SDLC adoption, integrating AI into the technology stack, and modernizing CI/CD pipelines using the Harness platform.",
+    location: "Bangalore, India",
+  },
+  {
+    dates: "Nov 2018 —\n2025",
     title: "Principal Architect — Intuit",
-    description:
-      "Technology leader for ~70 engineers across 5 geographies. Responsible for two of four capability pillars of GTM Tech Org driving $1.5B revenue. Built Global Web Platform powering 100% of marketing, help, and in-product content. Led GTM Tech Gen AI initiatives. Built notification platform delivering 3.5B+ notifications annually.",
-    location: "Bangalore",
+    description:"Led large engineering across multipe geographies, owning two of four capability pillars in the GTM Tech Org driving $1.5B revenue. Built the Global Web Platform powering 100% of marketing, help, and in-product content. Drove GTM Tech Gen AI initiatives. Delivered the notification platform serving 3.5B+ notifications annually.",
+    location: "Bangalore, India",
   },
   {
     dates: "Aug 2015 —\nOct 2018",
     title: "Principal Architect — ADP",
     description:
       "Led SmartConnect integration platform connecting cloud payroll systems (Workday, Oracle Fusion) with compliance products driving $2.5B revenue. Introduced Mule Anypoint, Akka, and Akka Streams for fast data streaming.",
-    location: "Pasadena, CA",
+    location: "Pasadena, California, USA",
   },
   {
     dates: "Sep 2008 —\nAug 2015",
     title: "Senior Architect — Warner Bros.",
     description:
       "Led and delivered key applications in WB Advanced Digital Services including Flixster, International Digital Copy DC2.0, OutMyWindow, WarnerBrosID, Dexter, NonTheatrical System, and Journalist Portal.",
-    location: "Burbank, CA",
+    location: "Burbank, California, USA",
   },
   {
     dates: "Feb 2007 —\nSep 2008",
     title: "Senior Architect — Mercury Insurance",
     description: "Architecture and engineering leadership for insurance technology systems.",
-    location: "Brea, CA",
+    location: "Brea, California, USA",
   },
   {
     dates: "Apr 2004 —\nJan 2007",
     title: "Technical Architect — Tavant Technologies",
     description: "Technical architecture and solution design for enterprise software.",
-    location: "Orange, CA",
+    location: "Orange, California, USA",
   },
   {
     dates: "Sep 2002 —\nMar 2004",
     title: "Technical Lead — Hewlett-Packard",
     description: "Technical leadership for enterprise projects.",
-    location: "Bangalore",
+    location: "Bangalore, India",
   },
   {
     dates: "Aug 2001 —\nSep 2002",
     title: "Technical Lead — Birlasoft",
     description: "Technical leadership for software delivery.",
-    location: "Noida",
+    location: "Noida, India",
   },
   {
     dates: "Jul 1997 —\nJul 2001",
     title: "Sr. Software Engineer — InfoGain",
     description: "Software engineering and development.",
-    location: "Noida",
+    location: "Noida, India",
   },
 ];
 

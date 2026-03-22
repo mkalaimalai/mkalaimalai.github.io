@@ -1,7 +1,14 @@
 import SectionHeader from "./SectionHeader";
 import RevealOnScroll from "./RevealOnScroll";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  href: string;
+  tags: string[];
+}
+
+const projects: Project[] = [
   {
     title: "Karuna Karma Soul & DNA Healing",
     description:

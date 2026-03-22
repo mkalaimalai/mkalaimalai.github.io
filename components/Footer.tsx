@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer
@@ -8,7 +10,7 @@ export default function Footer() {
         className="font-mono text-[0.7rem] tracking-widest"
         style={{ color: "var(--t-footer-text)" }}
       >
-        &copy; 2026 Madhu Kalaimalai. Crafted with intention.
+        &copy; {currentYear} Madhu Kalaimalai. Crafted with intention.
       </p>
     </footer>
   );

@@ -1,10 +1,27 @@
 import SectionHeader from "./SectionHeader";
 import RevealOnScroll from "./RevealOnScroll";
 
-function SkillLevel({ filled }: { filled: number }) {
+interface Skill {
+  name: string;
+  level: number;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+function SkillLevel({ filled, name }: { filled: number; name: string }) {
   return (
-    <div className="flex gap-[3px]">
-      {[...Array(5)].map((_, i) => (
+    <div
+      className="flex gap-[3px]"
+      role="meter"
+      aria-label={`${name} proficiency`}
+      aria-valuenow={filled}
+      aria-valuemin={0}
+      aria-valuemax={5}
+    >
+      {Array.from({ length: 5 }, (_, i) => (
         <span
           key={i}
           className={`w-3 h-[3px] ${i < filled ? "bg-terra" : "bg-rule"}`}
@@ -14,7 +31,7 @@ function SkillLevel({ filled }: { filled: number }) {
   );
 }
 
-const categories = [
+const categories: SkillCategory[] = [
   {
     title: "Languages",
     skills: [
@@ -77,7 +94,7 @@ export default function Skills() {
                       style={{ borderColor: "var(--t-skill-border)" }}
                     >
                       {skill.name}
-                      <SkillLevel filled={skill.level} />
+                      <SkillLevel filled={skill.level} name={skill.name} />
                     </li>
                   ))}
                 </ul>

@@ -19,10 +19,10 @@ export default function About() {
           <div className="grid grid-cols-2 gap-16 items-start max-md:grid-cols-1">
             <div className="space-y-5 text-[var(--t-body-text)]">
               <p className="about-drop-cap">
-                Principal Architect based in Bangalore, India, with over 25 years of experience building complex, large-scale distributed systems. I&apos;ve led engineering teams of ~70 engineers across 5 geographies, driving platforms that power billions of notifications and billions in revenue.
+                Senior Principal Architect at JPMorganChase, based in Bangalore, India, with over 27 years of experience building complex, large-scale distributed systems. I&apos;ve led engineering teams of ~70 engineers across 5 geographies, driving platforms that power billions of notifications and billions in revenue.
               </p>
               <p>
-                My career spans leadership roles at Intuit, ADP, Warner Bros., Mercury Insurance, Tavant Technologies, Hewlett-Packard, Birlasoft, and Infogain — from architecting global web platforms and notification systems to building integration platforms and digital services.
+                My career spans leadership roles at JPMorganChase, Intuit, ADP, Warner Bros., Mercury Insurance, Tavant Technologies, Hewlett-Packard, Birlasoft, and Infogain — from architecting global web platforms and notification systems to building integration platforms and digital services.
               </p>
               <p>
                 I hold an MBA in Systems and a B.Tech in Engineering, am an AWS Certified Solutions Architect, and hold two U.S. patents in distributed systems design.

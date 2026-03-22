@@ -24,9 +24,16 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Madhu Kalaimalai — Principal Architect",
+  title: "Madhu Kalaimalai — Senior Principal Architect",
   description:
-    "Personal site of Madhu Kalaimalai — Principal Architect and technology leader with 25+ years of experience building complex, large-scale distributed systems at Intuit, ADP, Warner Bros., and more.",
+    "Personal site of Madhu Kalaimalai — Senior Principal Architect at JPMorganChase with 27+ years of experience building complex, large-scale distributed systems at JPMorganChase, Intuit, ADP, Warner Bros., and more.",
+  openGraph: {
+    title: "Madhu Kalaimalai — Senior Principal Architect",
+    description:
+      "Technology leader with 27+ years building large-scale distributed systems at JPMorganChase, Intuit, ADP, and Warner Bros.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -48,6 +55,12 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-terra focus:text-paper focus:px-4 focus:py-2 focus:rounded-sm focus:text-sm focus:font-medium"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

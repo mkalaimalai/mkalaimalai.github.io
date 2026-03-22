@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTheme } from "./ThemeProvider";
 
 const links = [
@@ -10,7 +10,7 @@ const links = [
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
-];
+] as const;
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,13 +20,25 @@ export default function Navbar() {
   useEffect(() => {
     let lastScroll = 0;
     const onScroll = () => {
-      const current = window.pageYOffset;
+      const current = window.scrollY;
       setHidden(current > lastScroll && current > 120);
       lastScroll = current;
     };
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close mobile menu on Escape key
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
+
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   return (
     <nav
@@ -34,6 +46,7 @@ export default function Navbar() {
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
       style={{ background: "var(--t-nav-bg)" }}
+      aria-label="Main navigation"
     >
       <div className="max-w-[1100px] mx-auto px-8 flex justify-between items-center h-16">
         <a href="#" className="font-display text-[1.35rem] text-ink no-underline tracking-tight">
@@ -44,15 +57,15 @@ export default function Navbar() {
           {/* Theme toggle */}
           <button
             onClick={toggle}
-            aria-label="Toggle theme"
+            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
             className="w-8 h-8 flex items-center justify-center rounded-full border border-rule bg-transparent cursor-pointer transition-colors hover:border-terra text-warm-gray hover:text-terra"
           >
             {theme === "light" ? (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
               </svg>
             ) : (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="5" />
                 <line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" />
                 <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
@@ -65,8 +78,10 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             className="md-nav:hidden relative w-7 h-5 bg-transparent border-none cursor-pointer"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <span className={`block absolute left-0 w-full h-0.5 bg-ink transition-all duration-300 ${menuOpen ? "top-[9px] rotate-45" : "top-0"}`} />
             <span className={`block absolute left-0 w-full h-0.5 bg-ink transition-all duration-300 top-[9px] ${menuOpen ? "opacity-0" : ""}`} />
@@ -75,7 +90,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop links */}
-        <ul className="hidden md-nav:flex list-none gap-8">
+        <ul className="hidden md-nav:flex list-none gap-8" role="list">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -91,14 +106,16 @@ export default function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <ul
+            id="mobile-menu"
             className="md-nav:hidden absolute top-16 left-0 right-0 flex flex-col gap-4 px-8 py-6 border-b border-rule list-none"
             style={{ background: "var(--t-nav-mobile-bg)" }}
+            role="list"
           >
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={closeMenu}
                   className="no-underline text-warm-gray text-[0.82rem] font-medium tracking-widest uppercase transition-colors duration-250 hover:text-terra"
                 >
                   {l.label}
