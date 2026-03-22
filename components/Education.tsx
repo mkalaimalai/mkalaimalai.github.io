@@ -30,10 +30,10 @@ export default function Education() {
                 U.S. Patents
               </h4>
               <p>
-                <strong>US20200117747A1</strong> — &ldquo;Actor-based information system&rdquo;, ADP Inc
+                <a href="https://patents.google.com/patent/US20200117747A1/en" target="_blank" rel="noopener noreferrer" className="text-terra hover:text-terra-light transition-colors duration-300"><strong>US20200117747A1</strong></a> — &ldquo;Actor-based information system&rdquo;, ADP Inc
               </p>
               <p>
-                <strong>US10812602B2</strong> — &ldquo;Devices and methods for enabling communication among multiple services having a different, incompatible client profile&rdquo;, ADP Inc
+                <a href="https://patents.google.com/patent/US10812602B2/en" target="_blank" rel="noopener noreferrer" className="text-terra hover:text-terra-light transition-colors duration-300"><strong>US10812602B2</strong></a> — &ldquo;Devices and methods for enabling communication among multiple services having a different, incompatible client profile&rdquo;, ADP Inc
               </p>
             </div>
           </div>
